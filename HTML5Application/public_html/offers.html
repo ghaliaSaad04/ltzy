@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OFFERS</title>
+    <link rel="stylesheet" href="newcss.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src= "images/logo.png" alt="Logo">  
+                    <span>LTZY</span>  
+                </div>
+                <ul class="nav-links">
+                    <li><a href="SellerDashboard.html">Seller Dashboard</a></li>
+                    <li><a href="userPage.html">User Page</a></li>
+                    <li><a href="Groceries.html">Groceries</a></li>
+                    <li><a href="Health.html">Health</a></li>
+                    <li><a href="Electronics.html">Electronic</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="HomePage.html">Home Page</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="containerM">
+        <div class="offers-section">
+            <h2 class="heof">OFFERS</h2>
+            <ul class="offers-list" id="offersList"></ul>
+            <button class="delete-button">DELETE</button>
+        </div>
+
+        <div class="add-offer-section">
+            <h2 class="heof">ADD NEW OFFER</h2>
+            <form id="addOfferForm">
+                <div class="form-group">
+                    <label for="offerName">Offer Name</label>
+                    <input type="text" id="offerName" name="offerName" >
+                </div>
+                <div class="form-group">
+                    <label for="offerDescription">Offer Description</label>
+                    <textarea id="offerDescription" name="offerDescription" ></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="offerPhoto">Offer Photo</label>
+                    <input type="file" id="offerPhoto" class="browse-input" accept="image/*" >
+                    <div class="image-preview-box">
+                        <img id="imagePreview" src="images/defult-image.jpg" alt="Image Preview" style="display: none;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Add</button>
+                </div>
+            </form>   
+        </div>
+    </div>
+
+   <!-- footer here --> 
+<footer> 
+    <div class="footer-top"> 
+        <div class="footer-top-content"> 
+            <img src="images/logo.png" alt="Large Image" class="large-image"> <!-- Larger image --> 
+            <div class="email-container"> 
+                <a href="mailto:LTZY@hotmail.com" class="email">LTZY@hotmail.com</a> 
+            </div> 
+            <div class="footer-images"> 
+                <div class="image-container"> 
+                    <img src="images/f1.png" alt="instgram"> 
+                    <span class="image-caption">@LTZY</span> 
+                </div> 
+                <div class="image-container"> 
+                    <img src="images/f2.png" alt="snapchat"> 
+                    <span class="image-caption">LTZY  </span> 
+                </div> 
+                <div class="image-container"> 
+                    <img src="images/f3.png" alt="x"> 
+                    <span class="image-caption">@LTZY</span> 
+                </div> 
+                <div class="image-container"> 
+                    <img src="images/f4.png" alt="Tiktok"> 
+                    <span class="image-caption">@LTZY</span> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <div class="footer-bottom"> 
+        &copy;2024 Ltzy 
+    </div> 
+</footer> 
+
+  
+    <script src="offer.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Product Evaluation</title> 
+    <link rel="stylesheet" href="newcss.css"> 
+    <script src="evalScript.js" defer></script>
+
+</head> 
+ 
+<body> 
+    
+    <header> 
+            
+  <nav> 
+    <div class="nav-container"> 
+      <div class="logo"> 
+        <img src="images/logo.png" alt="Logo">  
+        <span>LTZY</span>  
+      </div> 
+      <ul class="nav-links"> 
+      <li><a href="SellerDashboard.html">Seller Dashboard</a></li> 
+        <li><a href="userPage.html">User Page</a></li> 
+        <li><a href="Groceries.html">Groceries</a></li> 
+         <li><a href="Health.html">Health</a></li> 
+          <li><a href="Electronics.html">Electronic</a></li> 
+        <li><a href="cart.html">Cart</a></li> 
+        <li><a href="HomePage.html">Home Page</a></li> 
+      </ul> 
+    </div> 
+  </nav> 
+    </header> 
+     
+     
+    <main> 
+         <form id="evalForm" action="submit_evaluation.php" method="post"> 
+    <div class="header-container"> 
+        <h1>Product Evaluation</h1> 
+        <label for="order">Select Order</label> 
+        <select id="order" name="order" required>
+    <option value="" disabled selected>Select Order</option>
+    <option value="1">Order #1</option>
+    <option value="2">Order #2</option>
+    <option value="3">Order #3</option>
+</select>
+
+    </div> 
+    <div id="rating-box"> 
+        <p>Order number #2456 </p> <p>total :$88.90</p>  
+
+        <fieldset class="logistic-rating">
+            <legend><h2>Logistic Service Rating</h2></legend>
+            <div class="star-rating"> 
+                <input type="radio" id="star5-logistic" name="rating" value="5">
+                <label for="star5-logistic" title="5 stars">&star;</label>
+                <input type="radio" id="star4-logistic" name="rating" value="4">
+                <label for="star4-logistic" title="4 stars">&star;</label>
+                <input type="radio" id="star3-logistic" name="rating" value="3">
+                <label for="star3-logistic" title="3 stars">&star;</label>
+                <input type="radio" id="star2-logistic" name="rating" value="2">
+                <label for="star2-logistic" title="2 stars">&star;</label>
+                <input type="radio" id="star1-logistic" name="rating" value="1">
+                <label for="star1-logistic" title="1 star">&star;</label>
+            </div> 
+        </fieldset>
+
+        <div class="product-container"> 
+            <div class="product"> 
+                <div class="product-details"> 
+                    <h2>Item #1</h2> 
+                    <img src="images/Ipad.png" alt="Product #1" class="product-image"> 
+                    <p style="font-size: 20px"> <strong>iPad</strong> </p> 
+                    <p>Apple iPad Air 10.9 5th Gen Tablet - 5G</p> 
+                    <fieldset>
+                        <legend><h3>Product Rating for iPad</h3></legend>
+                        <div class="star-rating"> 
+                            <input type="radio" id="star5-1" name="rating1" value="5">
+                            <label for="star5-1" title="5 stars">&star;</label>
+                            <input type="radio" id="star4-1" name="rating1" value="4">
+                            <label for="star4-1" title="4 stars">&star;</label>
+                            <input type="radio" id="star3-1" name="rating1" value="3">
+                            <label for="star3-1" title="3 stars">&star;</label>
+                            <input type="radio" id="star2-1" name="rating1" value="2">
+                            <label for="star2-1" title="2 stars">&star;</label>
+                            <input type="radio" id="star1-1" name="rating1" value="1">
+                            <label for="star1-1" title="1 star">&star;</label>
+                        </div> 
+                    </fieldset>
+                    <label for="feedback1">Your Feedback:</label> 
+                    <textarea id="feedback1" name="feedback1" rows="4" cols="40" required></textarea> 
+                </div> 
+            </div> 
+             
+            <div class="product"> 
+                <div class="product-details"> 
+                    <h2>Item #2</h2> 
+                    <img src="images/Applepen.png" alt="Product #2" class="product-image"> 
+                    <p style="font-size: 20px"> <strong>Apple Pencil</strong> </p> 
+                    <p>2024 Apple Pencil Pro</p> 
+                    <fieldset>
+                        <legend><h3>Product Rating for Apple Pencil</h3></legend>
+                        <div class="star-rating"> 
+                            <input type="radio" id="star5-2" name="rating2" value="5">
+                            <label for="star5-2" title="5 stars">&star;</label>
+                            <input type="radio" id="star4-2" name="rating2" value="4">
+                            <label for="star4-2" title="4 stars">&star;</label>
+                            <input type="radio" id="star3-2" name="rating2" value="3">
+                            <label for="star3-2" title="3 stars">&star;</label>
+                            <input type="radio" id="star2-2" name="rating2" value="2">
+                            <label for="star2-2" title="2 stars">&star;</label>
+                            <input type="radio" id="star1-2" name="rating2" value="1">
+                            <label for="star1-2" title="1 star">&star;</label>
+                        </div> 
+                    </fieldset>
+                    <label for="feedback2">Your Feedback:</label> 
+                    <textarea id="feedback2" name="feedback2" rows="4" cols="40" required></textarea> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <button type="submit">Submit Evaluation</button> 
+</form>
+
+       
+    </main> 
+     
+     <!-- footer here --> 
+<footer> 
+    <div class="footer-top"> 
+        <div class="footer-top-content"> 
+            <img src="images/logo.png" alt="Large Image" class="large-image"> <!-- Larger image --> 
+            <div class="email-container"> 
+                <a href="mailto:LTZY@hotmail.com" class="email">LTZY@hotmail.com</a> 
+            </div> 
+            <div class="footer-images"> 
+                <div class="image-container"> 
+                    <img src="images/f1.png" alt="instgram"> 
+                    <span class="image-caption">@LTZY</span> 
+                </div> 
+                <div class="image-container"> 
+                    <img src="images/f2.png" alt="snapchat"> 
+                    <span class="image-caption">LTZY  </span> 
+                </div> 
+                <div class="image-container"> 
+                    <img src="images/f3.png" alt="x"> 
+                    <span class="image-caption">@LTZY</span> 
+                </div> 
+                <div class="image-container"> 
+                    <img src="images/f4.png" alt="Tiktok"> 
+                    <span class="image-caption">@LTZY</span> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <div class="footer-bottom"> 
+        &copy;2024 Ltzy 
+    </div> 
+</footer> 
+      
+</body> 
+</html>
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Your Cart</title> 
+    <link rel="stylesheet" href="newcss.css"> 
+    <script src="cart.js" defer></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head> 
+<body class="GcartBody"> 
+    <header> 
+        <nav> 
+            <div class="nav-container"> 
+                <div class="logo"> 
+                    <img src="images/logo.png" alt="Logo">  
+                    <span>LTZY</span>  
+                </div> 
+                <ul class="nav-links"> 
+                    <li><a href="SellerDashboard.html">Seller Dashboard</a></li> 
+                    <li><a href="userPage.html">User Page</a></li> 
+                    <li><a href="Groceries.html">Groceries</a></li> 
+                    <li><a href="Health.html">Health</a></li> 
+                    <li><a href="Electronics.html">Electronic</a></li> 
+                    <li><a href="cart.html">Cart</a></li> 
+                    <li><a href="HomePage.html">Home Page</a></li> 
+                </ul> 
+            </div> 
+        </nav> 
+    </header> 
+
+    <h2 class="Gyourcart">Your Cart</h2> 
+    <div class="Gcart-container">
+        <table class="Gcart-items">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cart-body">
+                <!-- Cart items will be added dynamically here -->
+            </tbody>  
+        </table>
+
+        <div class="Gorder-summary"> 
+            <h2>Order Summary</h2> 
+            <div class="Gorder-text" id="first">             
+                <p>Total Price: 0.00SR</p> 
+            </div>  
+            <div class="Gorder-text">  
+                <p>Tax (10%): 0.00SR</p>                         
+            </div><br><br> 
+            <hr> 
+            <div class="Gorder-text"> 
+                <p>Total: 0.00SR</p> 
+            </div> 
+        </div>
+    </div> 
+
+    <div class="Gbuttons-container"> 
+        <button class="Gempty-cart">Empty Cart</button> 
+        <button class="Gcheckout">Check Out</button> 
+    </div> 
+
+    <footer> 
+        <div class="footer-top"> 
+            <div class="footer-top-content"> 
+                <img src="images/logo.png" alt="Large Image" class="large-image"> 
+                <div class="email-container"> 
+                    <a href="mailto:LTZY@hotmail.com" class="email">LTZY@hotmail.com</a> 
+                </div> 
+            </div> 
+        </div> 
+        <div class="footer-bottom"> 
+            &copy;2024 Ltzy 
+        </div> 
+    </footer> 
+</body> 
+</html>

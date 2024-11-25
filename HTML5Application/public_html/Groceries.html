@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groceries Page</title>
+    <link rel="stylesheet" href="newcss.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                    <span>LTZY</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="SellerDashboard.html">Seller Dashboard</a></li>
+                    <li><a href="UserPage.html">User Page</a></li>
+                    <li><a href="Groceries.html">Groceries</a></li>
+                    <li><a href="Health.html">Health</a></li>
+                    <li><a href="Electronics.html">Electronic</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="HomePage.html">Home Page</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="catagory-title">
+            <h2>Groceries</h2>
+            <hr>
+        </div>
+
+        <label for="sort">Sort by:</label>
+        <select id="sort" name="sort">
+            <option value="" disabled selected hidden>Sort</option>
+            <optgroup label="Price">
+                <option value="low-to-high">Lower to Higher</option>
+                <option value="high-to-low">Higher to Lower</option>
+            </optgroup>
+            <optgroup label="byName">
+                <option value="a-z">A to Z</option>
+                <option value="z-a">Z to A</option>
+            </optgroup>
+        </select>
+
+        <div class="product-list">
+
+            <div class="product-item1">
+                <div class="product-image1">
+                    <img src="images/Nada.png" alt="Drinking Greek Yoghurt">
+                </div>
+                <div class="product-details1">
+                    <div class="product-info1">
+                        <h3>Drinking Greek Yoghurt</h3>
+                        <p><strong>11SR</strong></p>
+                        <div class="describe1">
+                            <p>Nada Drinking Greek Yoghurt Plain Low Fat (330ml) is a delicious and nutritious drink, offering the creamy texture of Greek yogurt with reduced fat content.
+                                It's an excellent source of protein and probiotics,
+                                promoting digestive health while being light and refreshing.</p>
+                        </div>
+                    </div>
+                    <div class="product-actions1">
+                        <div class="quantity-cart-container">
+                            <div class="quantity-controls1">
+                                <button class="decrease-quantity">−</button>
+                                <div class="quantity1">1</div>
+                                <button class="increase-quantity">+</button>
+                            </div>
+                            <div class="cart-icon1">
+                                <button>🛒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item1">
+                <div class="product-image1">
+                    <img src="images/Coconut.png" alt="Coconut Rolls">
+                </div>
+                <div class="product-details1">
+                    <div class="product-info1">
+                        <h3>Coconut Rolls</h3>
+                        <p><strong>22SR</strong></p>
+                        <div class="describe1">
+                            <p>Coconut Rolls are a delightful and crispy snack made from real coconut milk and roasted sesame seeds,
+                                offering a lightly sweet and tropical flavor. These gluten-free, bite-sized treats are perfect for a quick
+                                snack or to enjoy with tea, providing a satisfying crunch with every bite. Ideal for coconut lovers!</p>
+                        </div>
+                    </div>
+                    <div class="product-actions1">
+                        <div class="quantity-cart-container">
+                            <div class="quantity-controls1">
+                                <button class="decrease-quantity">−</button>
+                                <div class="quantity1">1</div>
+                                <button class="increase-quantity">+</button>
+                            </div>
+                            <div class="cart-icon1">
+                                <button>🛒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item1">
+                <div class="product-image1">
+                    <img src="images/Crispies.png" alt="Choco Crispies">
+                </div>
+                <div class="product-details1">
+                    <div class="product-info1">
+                        <h3>Choco Crispies</h3>
+                        <p><strong>40SR</strong></p>
+                        <div class="describe1">
+                            <p>Wholesome Choco Crispies are a tasty, crunchy snack made from whole grains and coated with rich,
+                                delicious chocolate. Perfect for a guilt-free treat, they offer a satisfying balance of sweetness and crunch
+                                while being a source of fiber. Enjoy them as a snack on the go or a fun addition to your breakfast!</p>
+                        </div>
+                    </div>
+                    <div class="product-actions1">
+                        <div class="quantity-cart-container">
+                            <div class="quantity-controls1">
+                                <button class="decrease-quantity">−</button>
+                                <div class="quantity1">1</div>
+                                <button class="increase-quantity">+</button>
+                            </div>
+                            <div class="cart-icon1">
+                                <button>🛒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item1">
+                <div class="product-image1">
+                    <img src="images/peanut.png" alt="Peanut Butter">
+                </div>
+                <div class="product-details1">
+                    <div class="product-info1">
+                        <h3>Peanut Butter</h3>
+                        <p><strong>15SR</strong></p>
+                        <div class="describe1">
+                            <p>Peanut Butter & Co. Smooth Peanut Butter is made from high-quality roasted peanuts,
+                                delivering a rich and creamy texture. With no added artificial ingredients or preservatives,
+                                it's a perfect source of protein and healthy fats. Ideal for spreading on toast, adding to smoothies, 
+                                or enjoying straight from the jar!</p>
+                        </div>
+                    </div>
+                    <div class="product-actions1">
+                        <div class="quantity-cart-container">
+                            <div class="quantity-controls1">
+                                <button class="decrease-quantity">−</button>
+                                <div class="quantity1">1</div>
+                                <button class="increase-quantity">+</button>
+                            </div>
+                            <div class="cart-icon1">
+                                <button>🛒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item1">
+                <div class="product-image1">
+                    <img src="images/wafers.png" alt="Strawberry Wafers">
+                </div>
+                <div class="product-details1">
+                    <div class="product-info1">
+                        <h3>Strawberry Wafers</h3>
+                        <p><strong>12SR</strong></p>
+                        <div class="describe1">
+                            <p>Kiddylicious Strawberry Wafers are delightful, crunchy snacks featuring layers of light, 
+                                crispy wafers filled with a sweet strawberry-flavored cream. These tasty treats are perfect for little hands,
+                                offering a delicious balance of texture and flavor.</p>
+                        </div>
+                    </div>
+                    <div class="product-actions1">
+                        <div class="quantity-cart-container">
+                            <div class="quantity-controls1">
+                                <button class="decrease-quantity">−</button>
+                                <div class="quantity1">1</div>
+                                <button class="increase-quantity">+</button>
+                            </div>
+                            <div class="cart-icon1">
+                                <button>🛒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item1">
+                <div class="product-image1">
+                    <img src="images/almond.jpeg" alt="Almond Milk">
+                </div>
+                <div class="product-details1">
+                    <div class="product-info1">
+                        <h3>Almond Milk</h3>
+                        <p><strong>19SR</strong></p>
+                        <div class="describe1">
+                            <p>Albro Almond Milk is a delicious and nutritious dairy alternative made from high-quality almonds.
+                                This creamy milk is low in calories and rich in vitamins, making it an excellent choice for those seeking
+                                a healthy lifestyle. Perfect for pouring over cereal, adding to smoothies, or enjoying in coffee.</p>
+                        </div>
+                    </div>
+                    <div class="product-actions1">
+                        <div class="quantity-cart-container">
+                            <div class="quantity-controls1">
+                                <button class="decrease-quantity">−</button>
+                                <div class="quantity1">1</div>
+                                <button class="increase-quantity">+</button>
+                            </div>
+                            <div class="cart-icon1">
+                                <button>🛒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item1">
+                <div class="product-image1">
+                    <img src="images/apple.png" alt="Apple Juice">
+                </div>
+                <div class="product-details1">
+                    <div class="product-info1">
+                        <h3>Apple Juice</h3>
+                        <p><strong>29SR</strong></p>
+                        <div class="describe1">
+                            <p>Apple Juice is a refreshing and natural beverage made from carefully selected, organic apples.
+                                This juice is free from artificial additives and preservatives, ensuring a pure and delicious taste with 
+                                every sip. Rich in vitamins and antioxidants.</p>
+                        </div>
+                    </div>
+                    <div class="product-actions1">
+                        <div class="quantity-cart-container">
+                            <div class="quantity-controls1">
+                                <button class="decrease-quantity">−</button>
+                                <div class="quantity1">1</div>
+                                <button class="increase-quantity">+</button>
+                            </div>
+                            <div class="cart-icon1">
+                                <button>🛒</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- نهاية .product-list -->
+
+    </div> <!-- نهاية .container -->
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-top-content">
+                <img src="images/logo.png" alt="Large Image" class="large-image">
+                <div class="email-container">
+                    <a href="mailto:LTZY@hotmail.com" class="email">LTZY@hotmail.com</a>
+                </div>
+                <div class="footer-images">
+                    <div class="image-container">
+                        <img src="images/f1.png" alt="instagram">
+                        <span class="image-caption">@LTZY</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/f2.png" alt="snapchat">
+                        <span class="image-caption">LTZY</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/f3.png" alt="x">
+                        <span class="image-caption">@LTZY</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/f4.png" alt="Tiktok">
+                        <span class="image-caption">@LTZY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy;2024 Ltzy
+        </div>
+    </footer>
+
+    <script src="category.js"></script>
+</body>
+
+</html>

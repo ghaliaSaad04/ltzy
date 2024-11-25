@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="newcss.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                    <span>LTZY</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="SellerDashboard.html">Seller Dashboard</a></li>
+                    <li><a href="userPage.html">User Page</a></li>
+                    <li><a href="Groceries.html">Groceries</a></li>
+                    <li><a href="Health.html">Health</a></li>
+                    <li><a href="Electronics.html">Electronics</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="HomePage.html">Home Page</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="containerSD">
+        <h2>Add New Product</h2>
+        <form id="product-form">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name">
+
+            <label for="product-price">Product Price:</label>
+            <input type="text" id="product-price" name="product-price">
+
+            <label for="product-category">Product Category:</label>
+            <select id="product-category" name="product-category">
+                <option value="Groceries">Groceries</option>
+                <option value="Health">Health</option>
+                <option value="Electronics">Electronics</option>
+            </select>
+
+            <label for="product-quantity">Product Quantity:</label>
+            <input type="text" id="product-quantity" name="product-quantity">
+
+            <label for="product-photo">Product Photo:</label>
+            <input type="file" id="product-photo" name="product-photo" accept="image/*">
+
+         <div id="image-preview-box" class="image-preview-box">
+ 
+    <img id="image-preview" src="images/default.jpg" alt="Product image preview" style="display: none;">
+</div>
+
+
+
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" class="textareaSD"></textarea>
+
+            <button type="submit">Add Product</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-top-content">
+                <img src="images/logo.png" alt="Large Image" class="large-image">
+                <div class="email-container">
+                    <a href="mailto:LTZY@hotmail.com" class="email">LTZY@hotmail.com</a>
+                </div>
+                <div class="footer-images">
+                    <div class="image-container">
+                        <img src="images/f1.png" alt="Instagram">
+                        <span class="image-caption">@LTZY</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/f2.png" alt="Snapchat">
+                        <span class="image-caption">LTZY</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/f3.png" alt="X">
+                        <span class="image-caption">@LTZY</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/f4.png" alt="TikTok">
+                        <span class="image-caption">@LTZY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy;2024 LTZY
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

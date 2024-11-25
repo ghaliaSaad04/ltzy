@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="newcss.css">
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styling */
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.625rem 1.25rem; /* Converted from 10px 20px */
+            background-color: #86c8e1;
+            position: relative;
+            z-index: 999; /* Ensure header is on top */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.625rem; /* Converted from 10px */
+        }
+
+        .logo img {
+            height: 3.75rem; /* Converted from 60px */
+        }
+
+        .logo span {
+            color: white;
+            font-size: 1.5rem; /* Converted from 24px */
+            font-weight: bold;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 0.9375rem; /* Converted from 15px */
+            margin: 0;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem; /* Converted from 16px */
+        }
+
+        /* Hamburger Icon */
+        .nav-toggle {
+            display: none;
+            font-size: 1.5rem; /* Converted from 24px */
+            cursor: pointer;
+            color: white;
+        }
+
+        /* Responsive Styling */
+        /* Tablet Screens (<= 768px) */
+        @media (max-width: 48rem) { /* Converted from 768px */
+            .nav-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            #theme-toggle {
+                position: static;
+                margin-left: auto;
+                margin-right: 1.25rem; /* Converted from 20px */
+                display: inline-block;
+                order: 2;
+                top: 0.625rem; /* Converted from 10px */
+                right: 0.625rem; /* Converted from 10px */
+                padding: 0.375rem 0.625rem; /* Converted from 6px 10px */
+                font-size: 0.625rem; /* Converted from 10px */
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #86c8e1;
+                padding: 0.625rem 0; /* Converted from 10px 0 */
+            }
+            .category {
+                width: 12.5rem; /* Converted from 200px */
+                height: 12.5rem; /* Converted from 200px */
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .footer-top-content {
+                flex-direction: column;
+            }
+
+            .footer-images {
+                justify-content: center;
+            }
+        }
+
+        /* Mobile Screens (<= 480px) */
+        @media (max-width: 30rem) { /* Converted from 480px */
+            .logo img {
+                height: 3.125rem; /* Converted from 50px */
+            }
+
+            .logo span {
+                font-size: 1.125rem; /* Converted from 18px */
+            }
+            .category {
+                width: 10.625rem; /* Converted from 170px */
+                height: 10.625rem; /* Converted from 170px */
+            }
+
+            .footer-top-content {
+                text-align: center;
+            }
+
+            .footer-images img {
+                width: 1.875rem; /* Converted from 30px */
+            }
+
+            .large-image {
+                width: 2.5rem; /* Converted from 40px */
+            }
+
+            #theme-toggle {
+                top: 0.3125rem; /* Converted from 5px */
+                right: 0.3125rem; /* Converted from 5px */
+                padding: 0.3125rem 0.5rem; /* Converted from 5px 8px */
+                font-size: 0.625rem; /* Converted from 10px */
+            }
+        }
+
+        /* Responsive Styling for 1135px Screens */
+        @media (max-width: 71.0625rem) { /* Converted from 1135px */
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.25rem; /* Converted from 20px */
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.625rem; /* Converted from 10px */
+                width: 100%;
+            }
+
+            .offers, .reviews {
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .offer, .review {
+                width: 80%;
+                margin: 0.625rem auto; /* Converted from 10px */
+            }
+
+            .offers button {
+                width: 100%;
+                margin-top: 1rem; /* Ensure button shows below the offers */
+            }
+
+            .categories {
+                flex-wrap: wrap;
+                gap: 0.9375rem; /* Converted from 15px */
+            }
+
+            .category {
+                width: 30%;
+                max-width: 18.75rem; /* Converted from 300px */
+                height: auto;
+            }
+        }
+
+        /* Home Page */
+        body {
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #86c8e1;
+            padding: 0.625rem 1.25rem; /* Converted from 10px 20px */
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin: 0 0.9375rem; /* Converted from 15px */
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.625rem 0.9375rem; /* Converted from 10px 15px */
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #00bcd4;
+            border-radius: 0.3125rem; /* Converted from 5px */
+        }
+
+        .vision {
+            background-color: #05729e;
+            color: white;
+            padding: 1.25rem; /* Converted from 20px */
+            text-align: center;
+        }
+
+        .offers, .reviews {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 1.25rem; /* Converted from 20px */
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .offers::-webkit-scrollbar, .reviews::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        .offer, .review {
+            flex: 0 0 auto;
+            border: 1px solid #ddd;
+            padding: 1.25rem; /* Converted from 20px */
+            background-color: #fff;
+            margin-right: 1.25rem; /* Converted from 20px */
+            width: 15.625rem; /* Converted from 250px */
+            height: 18.75rem; /* Converted from 300px */
+            scroll-snap-align: start;
+        }
+
+        .offer img, .review img {
+            width: 100%;
+            height: 9.375rem; /* Converted from 150px */
+            object-fit: cover;
+            margin-bottom: 0.625rem; /* Converted from 10px */
+        }
+        .offer img {
+            width: 100%;
+            height: 11.25rem; /* Converted from 180px */
+            object-fit: contain;
+            margin-bottom: 0.625rem; /* Converted from 10px */
+        }
+        .offer h3, .review h3 {
+            margin-top: 0;
+        }
+
+        .offer p, .review p {
+            margin-bottom: 1.25rem; /* Converted from 20px */
+        }
+
+        .offer button {
+            background-color: #4a4a4a;
+            color: white;
+            border: none;
+            padding: 0.625rem 0.9375rem; /* Converted from 10px 15px */
+            cursor: pointer;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3.75rem; /* Converted from 60px */
+            padding-top: 2.5rem; /* Converted from 40px */
+        }
+
+        .category {
+            position: relative;
+            width: 23.4375rem; /* Converted from 375px */
+            height: 23.4375rem; /* Converted from 375px */
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 1.875rem; /* Converted from 30px */
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .category:hover {
+            transform: scale(1.1);
+        }
+
+        .category img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .category:hover img {
+            opacity: 1;
+        }
+
+        .category-title {
+            position: absolute;
+            bottom: 0.625rem; /* Converted from 10px */
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.375rem; /* Converted from 22px */
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.3125rem 0.625rem; /* Converted from 5px 10px */
+            border-radius: 0.3125rem; /* Converted from 5px */
+        }
+
+        .review {
+            flex: 0 0 auto;
+            border: 1px solid #ddd;
+            padding: 0.9375rem; /* Converted from 15px */
+            background-color: #fff;
+            margin-right: 0.9375rem; /* Converted from 15px */
+            width: 15.625rem; /* Converted from 250px */
+            scroll-snap-align: start;
+        }
+
+        .review img {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 0.625rem; /* Converted from 10px */
+        }
+
+        .review h3 {
+            margin-top: 0;
+            font-size: 1.125rem; /* Converted from 18px */
+        }
+
+        .review p {
+            font-size: 0.875rem; /* Converted from 14px */
+            margin-bottom: 0.625rem; /* Converted from 10px */
+        }
+
+        .review-stars {
+            font-size: 1.25rem; /* Converted from 20px */
+            color: #ffa500;
+        }
+
+        .review-stars .inactive {
+            color: #ccc;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-top-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .footer-bottom {
+            background-color: #fff;
+            padding: 1.25rem; /* Converted from 20px */
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .footer-images {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0.625rem; /* Converted from 10px */
+        }
+
+        .image-caption {
+            color: white;
+            font-size: 0.75rem; /* Converted from 12px */
+            text-align: center;
+        }
+
+        .email-container {
+            display: flex;
+            align-items: center;
+            margin-left: 0.625rem; /* Converted from 10px */
+        }
+        .email {
+            color: white;
+            text-decoration: none;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
+
+        .footer-images img {
+            width: 2.5rem; /* Converted from 40px */
+            height: 2.5rem; /* Converted from 40px */
+        }
+
+        .large-image {
+            width: 3.75rem; /* Converted from 60px */
+            height: 3.75rem; /* Converted from 60px */
+            margin-right: 1.25rem; /* Converted from 20px */
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        nav {
+            background-color: #86c8e1;
+            padding: 0.625rem 1.25rem; /* Converted from 10px 20px */
+            transition: background-color 0.3s;
+        }
+
+        nav.dark-mode {
+            background-color: #005f73;
+        }
+
+        .offer, .review {
+            border: 1px solid #ddd;
+            background-color: #fff;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .offer.hidden {
+            display: none;
+        }
+
+        .review-hover {
+            display: none;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.625rem; /* Converted from 10px */
+            border-radius: 0.3125rem; /* Converted from 5px */
+            z-index: 10;
+        }
+
+        .reviews {
+            position: relative;
+        }
+
+        /* Button Styles */
+        #theme-toggle {
+            background-color: #86c8e1;
+            color: white;
+            border: none;
+            padding: 0.625rem 0.9375rem; /* Converted from 10px 15px */
+            border-radius: 0.3125rem; /* Converted from 5px */
+            cursor: pointer;
+            margin-top: 0.625rem; /* Converted from 10px */
+            transition: background-color 0.3s;
+        }
+
+        #theme-toggle:hover {
+            background-color: #00bcd4;
+        }
+        body.dark-mode {
+    background-color: #333;
+    color: #fff; /* Change to a lighter color for contrast */
+}
+
+nav.dark-mode {
+    background-color: #005f73; /* Darker nav background */
+}
+
+.offer.dark-mode, .review.dark-mode {
+    background-color: #444; /* Darker background for offers and reviews */
+    color: #fff; /* Make text white for visibility */
+}
+
+.review-stars.dark-mode {
+    color: #ffa500; /* Star color remains for ratings */
+}
+
+.footer-top.dark-mode {
+    background-color: #005f73; /* Darker footer background */
+    color: #fff; /* White text for footer */
+}
+
+.footer-bottom.dark-mode {
+    background-color: #222; /* Darker bottom footer background */
+    color: #fff; /* White text for footer */
+}
+
+/* Additional adjustments for text color in dark mode */
+.category-title {
+    color: #fff; /* White text for category titles */
+}
+
+.vision {
+    background-color: #05729e; /* Keep vision section as is */
+    color: #fff; /* White text for vision */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo"> 
+                    <span>LTZY</span> 
+                </div>
+                <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+                <ul class="nav-links">
+                    <li><a href="SellerDashboard.html">Seller Dashboard</a></li>
+                    <li><a href="userPage.html">User Page</a></li>
+                    <li><a href="Groceries.html">Groceries</a></li>
+                    <li><a href="Health.html">Health</a></li>
+                    <li><a href="Electronics.html">Electronic</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="HomePage.html">Home Page</a></li>
+                </ul>
+                <button id="theme-toggle">Toggle Dark Mode</button>
+            </div>
+        </nav>
+    </header> 
+
+    <div class="vision">
+        <h1>Our Vision</h1>
+        <p>At LTZY, our vision is to create a seamless online platform that empowers individuals and families to make informed decisions about their health, 
+            technology, and everyday essentials. We strive to curate a diverse selection of high-quality products in health,
+            electronics, and supermarket categories, ensuring that our customers can access everything they need in one convenient place.</p>
+    </div>
+    
+    <div class="current-week"></div>
+
+    <section class="container">
+        <div class="offers">
+            <h2>Current Offers</h2>
+            <div class="offer">
+                <img src="images/offer1.jpg" alt="20% Off Vitamins">
+                <h3>20% Off Vitamins</h3>
+                <p>Enjoy a 20% discount on all vitamins. Stock up and save!</p>
+            </div>
+            <div class="offer">
+                <img src="images/offer2.jpg" alt="Buy 1 Choco CRISPIES, Get 1 Free">
+                <h3>Buy 1 Choco CRISPIES, Get 1 Free</h3>
+                <p>Purchase a pack of Choco CRISPIES and get another one for free!</p>
+            </div>
+            <div class="offer hidden">
+                <img src="images/offer3.jpg" alt="10% Off Apple Watch">
+                <h3>10% Off Apple Watch</h3>
+                <p>Enjoy a 10% discount on your favorite Apple Watch.</p>
+            </div>
+            <div class="offer hidden">
+                <img src="images/offer4.jpg" alt="Buy 2 Vitamins, Get 1 Free">
+                <h3>Buy 2 Vitamins, Get 1 Free</h3>
+                <p>Purchase any two vitamins and receive a third one for free.</p>
+            </div>
+            <div class="offer hidden">
+                <img src="images/offer5.jpg" alt="iPhone Coming Soon">
+                <h3>iPhone Coming Soon</h3>
+                <p>Stay tuned! The latest iPhone is on its way.</p>
+            </div>
+            <div class="offer hidden">
+                <img src="images/offer6.jpg" alt="New Watch Arrived">
+                <h3>New Watch Arrived</h3>
+                <p>The wait is over! Our latest watch has arrived.</p>
+            </div>
+            <button id="more-offers">More Offers</button>
+        </div>
+    </section>
+
+    <div class="categories">
+        <div class="category">
+            <a href="Groceries.html"><img src="images/cat5.jpg" alt="Groceries"></a>
+            <div class="category-title">Groceries</div> 
+        </div>
+        <div class="category">
+            <a href="Health.html"><img src="images/cat4.jpg" alt="Health"></a>
+            <div class="category-title">Health</div> 
+        </div>
+        <div class="category">
+            <a href="Electronics.html"><img src="images/cat1.jpg" alt="Electronic"></a>
+            <div class="category-title">Electronic</div> 
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="reviews">
+            <div class="review" data-name="John Doe" data-product="Choco CRISPIES" data-rate="5" data-feedback="I love the Choco CRISPIES! The buy 1 get 1 free offer is fantastic!">
+                <img src="images/Crispies.png" alt="Choco CRISPIES">
+                <h3>Choco CRISPIES</h3>
+                <p>"I love the Choco CRISPIES! The buy 1 get 1 free offer is fantastic!"</p>
+                <div class="review-stars">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+            </div>
+            <div class="review" data-name="Jane Smith" data-product="Apple Watch" data-rate="4" data-feedback="Great discount! I got 10% off my new Apple Watch. Highly recommend!">
+                <img src="images/AppleWatch.png" alt="Apple Watch">
+                <h3>Apple Watch</h3>
+                <p>"Great discount! I got 10% off my new Apple Watch. Highly recommend!"</p>
+                <div class="review-stars">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span class="inactive">&#9733;</span>
+                </div>
+            </div>
+            <div class="review" data-name="Emily Johnson" data-product="Vitamins" data-rate="5" data-feedback="The buy 2 get 1 free deal on vitamins is amazing! My family loves them!">
+                <img src="images/raspberry.png" alt="Vitamins">
+                <h3>Vitamins</h3>
+                <p>"The buy 2 get 1 free deal on vitamins is amazing! My family loves them!"</p>
+                <div class="review-stars">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+            </div>
+            <div class="review" data-name="Michael Brown" data-product="New Watch" data-rate="3" data-feedback="I recently bought the new watch, and while it looks great, I expected more features for the price.">
+                <img src="images/Whoop.png" alt="New Watch">
+                <h3>New Watch</h3>
+                <p>"I recently bought the new watch, and while it looks great, I expected more features for the price."</p>
+                <div class="review-stars">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span class="inactive">&#9733;</span>
+                    <span class="inactive">&#9733;</span>
+                </div>
+            </div>
+            <div class="review-hover"></div>
+        </div>
+    </div>      
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-top-content">
+                <img src="images/logo.png" alt="Large Image" class="large-image">
+                <div class="email-container">
+                    <a href="mailto:LTZY@hotmail.com" class="email">LTZY@hotmail.com</a>
+                </div>
+                <div class="footer-images">
+                    <div class="image-container">
+                        <img src="images/f1.png" alt="Instagram">
+                        <span class="image-caption">@LTZY</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/f2.png" alt="Snapchat">
+                        <span class="image-caption">LTZY</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/f3.png" alt="X">
+                        <span class="image-caption">@LTZY</span>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/f4.png" alt="TikTok">
+                        <span class="image-caption">@LTZY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy;2024 Ltzy
+        </div>
+    </footer>
+<script src="HomePage.js"></script>  
+</body>
+</html>
